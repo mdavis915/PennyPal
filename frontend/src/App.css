@@ -1,0 +1,580 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important; /* Updated font */
+}
+
+body {
+  background-color: #ffffff;  /* Clean white background */
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Section */
+.header {
+  background-color: #4CAF50;  /* Vibrant green */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #ffffff !important;  /* White text for contrast */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #C8E6C9;  /* Light green hover effect */
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+  font-size: 18px;
+  color: #ffffff !important; /* Force white color */
+  font-weight: 600; /* Bold font weight */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Navbar Link Hover */
+.navbar .nav-link:hover {
+  color: #f0f0f0 !important; /* Slightly lighter color on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Navbar Active Link */
+.navbar .nav-link.active {
+  color: #007bff !important; /* Change color of active link */
+}
+
+/* Disabled Links (optional) */
+.navbar .nav-link:disabled {
+  color: #6c757d !important; /* Greyed-out color for disabled links */
+}
+
+
+
+
+
+/* Main Content */
+.main-content {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cta-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2E7D32;  /* Darker green for contrast */
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Improved CTA Button */
+.cta-button {
+  background-color: #FF9800;  /* Warm orange */
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #F57C00;  /* Darker orange */
+  transform: scale(1.05);
+}
+
+/* Piggy Bank Animation */
+.piggy-bank-graphic img {
+  display: block;
+  width: 100%;  /* Makes sure it can scale */
+  max-width: 300px; /* Adjust this as needed */
+  height: auto;
+  margin: 30px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Scale-Up Animation */
+@keyframes scaleUp {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.2); /* Slight zoom effect */
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .cta-button {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+  }
+
+  .cta-section {
+      padding: 25px 20px;
+  }
+}
+
+.deposit-container {
+  text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.currency-symbol {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+
+.deposit-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.deposit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.deposit-button:hover {
+  background-color: #45a049;
+}
+
+/* Transactions Page */
+.transactions-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Transaction Cards */
+.transaction-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.transaction-card:hover {
+  transform: scale(1.02);
+}
+
+/* Deposit vs Withdrawal Colors */
+.deposit {
+  border-left: 5px solid #4CAF50; /* Green */
+}
+
+.withdrawal {
+  border-left: 5px solid #F44336; /* Red */
+}
+
+/* Icons */
+.transaction-icon {
+  font-size: 24px;
+}
+
+/* Transaction Details */
+.transaction-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.transaction-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.transaction-note {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.transaction-date {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.transactions-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.search-bar, select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-card {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.transaction-card:hover {
+  transform: scale(1.02);
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.transaction-note {
+  flex: 1;
+  margin: 0 10px;
+  color: #555;
+}
+
+.transaction-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.transaction-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.toggle-buttons button {
+  padding: 10px;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.toggle-buttons .active {
+  background: #007bff;
+  color: white;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.transaction-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+
+.deposit-button {
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.withdraw-button {
+  background: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem; /* Ensure font size matches */
+  font-weight: bold; /* Ensure boldness matches */
+}
+
+/* Goals Form Styles - Scoped to only goals-related elements */
+.goal-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f6f9; /* Light background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.goal-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.goal-container h3 {
+  font-size: 1.5rem;
+  color: #495057;
+  margin-top: 40px;
+}
+
+.goal-container .input-group {
+  position: relative;
+  margin: 15px 0;
+}
+
+.goal-container .goal-input {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  border: none; /* Removed border */
+  outline: none;
+}
+
+.goal-container .goal-input:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus shadow effect */
+  background-color: #e9f1ff; /* Light blue background on focus */
+}
+
+.goal-container .currency-symbol {
+  position: absolute;
+  padding: 12px;
+  font-size: 1.1rem;
+  color: #007bff;
+  left: 10px;
+  top: 12px;
+}
+
+.goal-container .goal-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.goal-container .goal-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.goal-container .goals-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.goal-container .goal-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 15px;
+  width: 220px;
+  height: 180px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.goal-container .goal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.goal-container .goal-card h4 {
+  font-size: 1.3rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.goal-container .goal-card p {
+  font-size: 1.2rem;
+  color: #28a745; /* Green text for the amount */
+  font-weight: bold;
+}
+
+.goal-container .goal-card .goal-name {
+  color: #007bff; /* Blue text for the goal name */
+  font-weight: bold;
+}
+
+.goal-container .goal-button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.balance-display {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #28a745; /* Green background for the balance */
+  color: white;
+  font-size: 1.2rem; /* Smaller font size */
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.progress {
+  background-color: #76c7c0; /* You can choose a different color */
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out; /* Smooth transition */
+}

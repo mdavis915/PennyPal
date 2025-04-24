@@ -1,0 +1,131 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important; /* Use Poppins globally */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔐 prevents horizontal scroll */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+/* Style for the Navbar */
+.MuiAppBar-root {
+  position: fixed;  /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Make the navbar stretch across the full width */
+  z-index: 1000;  /* Ensure it's on top of other content */
+}
+
+.home-container {
+  padding-top: 0px;  /* This only adds top padding, which is fine if that's what you need */
+  /* Ensure no left/right padding is applied: */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Main content styling */
+.main-content {
+  padding: 20px;
+}
+
+/* Image styling */
+.piggy-bank-graphic {
+  width: 100%;
+  max-width: 300px;  /* Increased from 500px to 700px */
+  margin-top: 20px;
+}
+
+/* Coin Drop Container */
+.coin-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.coin {
+  position: absolute;
+  top: 0; /* Start from the top of the screen */
+  width: 30px;
+  height: 30px;
+  background-color: gold;
+  border-radius: 50%;
+  animation: fall 2.5s ease-in forwards; /* Increased duration to 2.5s */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateCoin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
